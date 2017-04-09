@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Zairza Farewell</title>
+
+    <meta name="description" content="Legendary Story" />
+    <meta name="author" content="Entrepreneur" />
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>'
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" title="no title">
+
+    <!--
+
+        Impress.js doesn't depend on any external stylesheets. It adds all of the styles it needs for the
+        presentation to work.
+
+        This style below contains styles only for demo presentation. Browse it to see how impress.js
+        classes are used to style presentation steps, or how to apply fallback styles, but I don't want
+        you to use them directly in your presentation.
+
+        Be creative, build your own. We don't really want all impress.js presentations to look the same,
+        do we?
+
+        When creating your own presentation get rid of this file. Start from scratch, it's fun!
+
+    -->
+    <link href="css/impress-demo.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+<!--
+
+    Body element is used by impress.js to set some useful class names, that will allow you to detect
+    the support and state of the presentation in CSS or other scripts.
+
+    First very useful class name is `impress-not-supported`. This class means, that browser doesn't
+    support features required by impress.js, so you should apply some fallback styles in your CSS.
+    It's not necessary to add it manually on this element. If the script detects that browser is not
+    good enough it will add this class, but keeping it in HTML means that users without JavaScript
+    will also get fallback styles.
+
+    When impress.js script detects that browser supports all required features, this class name will
+    be removed.
+
+    The class name on body element also depends on currently active presentation step. More details about
+    it can be found later, when `hint` element is being described.
+
+-->
+<body class="impress-not-supported">
+    <!-- <audio controls autoplay id="player">
+      <source src="song/instru.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio> -->
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+
+    Now that's the core element used by impress.js.
+
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+
+-->
+<div id="impress">
+
+    <!--
+
+        Here is where interesting thing start to happen.
+
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+
+        Positioning information is passed through data attributes.
+
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+
+        It will not be rotated or scaled.
+
+    -->
+    <div id="zairza" class="step slide" data-x="-1000" data-y="-1500">
+        <q style="margin-top:50px;">
+        <h1><b>Welcome_to_the_robosof.lab(farewell)<br>{</b></h1>
+        <p>And we want to thank our developers
+            for being with us since last 3 years.</p>
+        <div class="hint">
+        </div>
+          <!-- <img src="images/me.JPG" class="img-circle" height="30%" width="30%"/> -->
+        </q>
+    </div>
+
+    <!--
+
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+
+        So in the example below it'll be `step-2`.
+
+        The hash part of the url when this step is active will be `#/step-2`.
+
+        You can also use `#step-2` in a link, to point directly to this particular step.
+
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+
+    -->
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>“The two hardest things to say in life are hello for the first time and goodbye for the last.”<br>
+           “Don't cry because it's over, smile because it happened.” <br>
+           “Man's feelings are always purest and most glowing in the hour of meeting and of farewell.” <br>
+           “Great is the art of beginning, but greater is the art of ending.”<br/>
+        </q>
+        <ps>We are grateful to have you.</ps>
+    </div>
+
+
+  <!-- <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">You are the most</span>
+        <h1>Wonderful</h1>
+        <span class="footnote">person I have ever met.</span>
+    </div>
+
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>A person who never fails to surprise me with her intelligence, compassion, humor and beauty.</p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>A cute being with <b>big</b> <span class="thoughts">& amazing thoughts</span></p>
+    </div>
+ -->
+ <div id="overview1" class="step" data-x="2700" data-y="7300" data-scale="15">
+ </div>
+ <!-- <div id="overview" class="step" data-x="3485" data-y="3700" data-scale="6">
+ </div> -->
+    <div class="step" data-x="0" data-y="2025" data-z="-3000"  data-scale="4" style="font-weight: normal">
+    <center>
+      <img src="/images/1.jpg" class="" height="80%" width="80%" />
+    </center>
+    </div>
+    <div class="step" data-x="0" data-y="825" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+        <p>----------------------
+          -----------------------
+          ---------
+        <p>
+    </div>
+    <div class="step" data-x="0" data-y="2025" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+           ----------
+           ------------
+           ---------
+   </div>
+   <div class="step" data-x="0" data-y="3225" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+            --------------------
+          -----------</p>
+    </div>
+<!--  -->
+    <div class="step" data-x="3425" data-y="2025" data-z="-3000"  data-scale="4" style="font-weight: normal">
+      <center>
+        <img src="/images/2.jpg" class="" height="80%" width="80%" />
+      </center>
+    </div>
+    <div class="step" data-x="3425" data-y="825" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+        <p>--------------------------<p>
+    </div>
+    <div class="step" data-x="3425" data-y="2025" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+      <p>-----------------
+      ------------------------</p>
+   </div>
+   <div class="step" data-x="3425" data-y="3225" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+        <p>-----------------</p>
+    </div>
+<!--  -->
+    <div  class="step" data-x="6825" data-y="2025" data-z="-3000"  data-scale="4" style="font-weight: normal">
+    <center>
+      <img src="/images/3.jpg" class="" height="80%" width="80%" />
+    </center>
+    </div>
+    <div class="step" data-x="6825" data-y="825" data-z="-2870"  data-rotate-x='-90' data-scale="0.5" style="font-size: 30px">
+        <p>--------
+          -------------
+        <p>
+    </div>
+    <div class="step" data-x="6825" data-y="2025" data-z="-2870"  data-rotate-x='-90' data-scale="0.5" style="font-size: 30px">
+          -------------------------
+          ------------
+   </div>
+   <div class="step" data-x="6825" data-y="3025" data-z="-2870"  data-rotate-x='-90' data-scale="0.5" style="font-size: 30px">
+             --------------------
+           -------------------
+         --------------- </p>
+    </div>
+<!-- --------------------------------------- -->
+
+-->
+
+<div class="step" data-x="0" data-y="5525" data-z="-3000"  data-scale="4" style="font-weight: normal">
+  <center>
+    <img src="/images/4.jpg" class="" height="80%" width="80%" />
+  </center>
+</div>
+<div class="step" data-x="0" data-y="4325" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+  <p>-----------------------
+    ---------------------
+    --------------------------------
+    ----------------------
+    ----------------------------
+    <p>
+    </div>
+    <div class="step" data-x="0" data-y="5525" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+    ------------------------------------
+    ------------------------
+    --------------- <br>
+    </div>
+    <div class="step" data-x="0" data-y="6725" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+      -----------------------
+    -----------------</p>
+    </div>
+<!--  -->
+   <div class="step" data-x="3425" data-y="5525" data-z="-3000"  data-scale="4" style="font-weight: normal">
+     <center>
+       <img src="/images/5.jpg" class="" height="80%" width="80%" />
+     </center>
+   </div>
+   <div class="step" data-x="3425" data-y="4325" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+       <p>----------------
+         ----------------------
+         -----------------------------
+       <p>
+   </div>
+   <div class="step" data-x="3425" data-y="5525" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+         -------------<br>
+        ----------------<br>
+        ------------------------<br>
+         -----------------------------<br>
+  </div>
+  <div class="step" data-x="3425" data-y="6725" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+        ---------------------
+      -------------------------
+    --------------------</p>
+   </div>
+<!--  -->
+   <div  class="step" data-x="6825" data-y="5525" data-z="-3000"  data-scale="4" style="font-weight: normal">
+   <center>
+     <img src="/images/6.jpg" class="" height="60%" width="60%" />
+   </center>
+   </div>
+   <div class="step" data-x="6825" data-y="4325" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+       <p>---------------------------------
+         ------------------------------
+         ----------------
+       <p>
+   </div>
+   <div class="step" data-x="6825" data-y="5525" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+         ------------------------------------------------
+         ------------------------------------------------ <br>
+         ------------------------------------------------ <br>
+         ------------------------------------------------ <br>
+         ---------------------------------------------------
+  </div>
+  <div class="step" data-x="6825" data-y="6725" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+        --------------------
+        <b> -------------------</b> </p>
+   </div>
+
+<!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+   <!-- <div id="overview2" class="step" data-x="3485" data-y="11225" data-scale="8">
+   </div> -->
+      <div class="step" data-x="0" data-y="9025" data-z="-3000"  data-scale="4" style="font-weight: normal">
+      <center>
+        <img src="/images/7.jpg" class="" height="50%" width="50%" />
+      </center>
+      </div>
+      <div class="step" data-x="0" data-y="6825" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+          <p>----------------------
+            -----------------------
+            ---------
+          <p>
+      </div>
+      <div class="step" data-x="0" data-y="9025" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+             ----------
+             ------------
+             ---------
+     </div>
+     <div class="step" data-x="0" data-y="10225" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+              --------------------
+            -----------</p>
+      </div>
+  <!--  -->
+      <div class="step" data-x="3425" data-y="9025" data-z="-3000"  data-scale="4" style="font-weight: normal">
+        <center>
+          <img src="/images/8.jpg" class="" height="80%" width="80%" />
+        </center>
+      </div>
+      <div class="step" data-x="3425" data-y="6825" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+          <p>--------------------------<p>
+      </div>
+      <div class="step" data-x="3425" data-y="9025" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+        <p>-----------------
+        ------------------------</p>
+     </div>
+     <div class="step" data-x="3425" data-y="10225" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 50px">
+          <p>-----------------</p>
+      </div>
+  <!--  -->
+      <div  class="step" data-x="6825" data-y="9025" data-z="-3000"  data-scale="4" style="font-weight: normal">
+      <center>
+        <img src="/images/9.jpg" class="" height="80%" width="80%" />
+      </center>
+      </div>
+      <div class="step" data-x="6825" data-y="6825" data-z="-2870"  data-rotate-x='-90' data-scale="0.5" style="font-size: 30px">
+          <p>--------
+            -------------
+          <p>
+      </div>
+      <div class="step" data-x="6825" data-y="9025" data-z="-2870"  data-rotate-x='-90' data-scale="0.5" style="font-size: 30px">
+            -------------------------
+            ------------
+     </div>
+     <div class="step" data-x="6825" data-y="10225" data-z="-2870"  data-rotate-x='-90' data-scale="0.5" style="font-size: 30px">
+               --------------------
+             -------------------
+           --------------- </p>
+      </div>
+  <!-- --------------------------------------- -->
+
+  -->
+
+  <div class="step" data-x="3425" data-y="12525" data-z="-3000"  data-scale="4" style="font-weight: normal">
+    <center>
+      <img src="/images/10.jpg" class="" height="60%" width="60%" />
+    </center>
+  </div>
+  <div class="step" data-x="3425" data-y="11325" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+    <p>-----------------------
+      ---------------------
+      --------------------------------
+      ----------------------
+      ----------------------------
+      <p>
+      </div>
+      <div class="step" data-x="3425" data-y="12525" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+      ------------------------------------
+      ------------------------
+      --------------- <br>
+      </div>
+      <div class="step" data-x="3425" data-y="13725" data-z="-2870"  data-rotate-x='-90' data-scale="1" style="font-size: 30px">
+        -----------------------
+      -----------------</p>
+      </div>
+
+<!--  -->
+
+    <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p class="normal">I love your <b class="positioning">little fantasies</b>, <b class="rotating">puzzled thoughts</b> and <b class="scaling">bombastic vocabulary</b>.</p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p> I love them all.<br/><b class="imagination">The GOODs and the BADs.</b></p>
+    </div>
+
+    <div class="step slide" data-x="6200" data-y="-1500">
+        <q>
+        And, I want to thank you for all the good you see in me, and choose to ignore the bad.
+        <br/>
+        <b>You are the last thing I want to lose.</b>
+        </q>
+        <ps>You sexy Beast.</ps>
+    </div>
+
+    <div class="step" data-x="7400" data-y="-1500" data-rotate="20">
+        <p>Keep smiling and worry less.</p>
+        <p>Happiness is never 'Right Around the Corner'. It's always right here, where we are.</p>
+        <ps>Ab ek funda toh banta tha :D</ps>
+    </div>
+
+    <div class="step slide" data-x="7400" data-y="-2500">
+        <q>Stay with me <br/>because you are my favorite person. <Br/>
+        <small>And I shall always hold this hand. No matter what.</small>
+        <img src="images/final.png" class="photo-opace"/>
+        </q>
+        <ps>Where the fuck is my head O.o</ps>
+    </div>
+
+    <div class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="2">
+        <center><p>I love you honey</p>
+        <q><img src="images/final.jpg" class="white-border"/>
+        </q>
+        <ps>Hume toh best couple award mila chahiye :P</ps>    </center>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>one more thing...</p>
+    </div> -->&nbsp
+
+    <!--
+
+        And the last one shows full power and flexibility of impress.js.
+
+        You can not only position element in 3D, but also rotate it around any axis.
+        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
+        10 degrees (clockwise) around Y axis.
+
+        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
+        as `data-rotate` (these two are basically aliases).
+
+    -->
+    <!-- <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">I</span> <span class="you">am</span> never <span class="noticed">letting</span> <span class="its">you</span> <span class="in">go.</span> <b>Never.<sup>*</sup></b></p>
+        <span class="footnote">* <ps>aur start up chalega :)</ps></span>
+    </div> -->
+
+    <!--
+
+        So to summarize of all the possible attributes used to position presentation steps, we have:
+
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+    -->
+
+    <div id="overview" class="step" data-x="22000" data-y="7600" data-rotate="-80" data-scale="9">
+      </div>
+      <div  class="step" data-x="18500" data-y="10600" data-rotate="-80" data-scale="10">
+          <p style = 'text-align:center'> <b style="font-weight: small;"><span style="color:white">W</span><span style="color:grey">e</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:white">w</span><span style="color:grey">i</span><span style="color:white">l</span><span style="color:grey">l</span>&nbsp&nbsp&nbsp&nbsp&nbsp
+      </div>
+      <div class="step" data-x="19600" data-y="7600" data-z="-3000"  data-scale="4" style="font-weight: normal">
+      <center>
+        <img src="/images/collage.jpg" class="" height="250%" width="250%" />
+      </center>
+      </div>
+      <div  class="step" data-x="25800" data-y="3500" data-rotate="-80" data-scale="10">
+          <p style = 'text-align:center'> <b style="font-weight: small;"><span style="color:white">m</span><span style="color:grey">i</span><span style="color:grey">s</span><span style="color:white">s</span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:grey">y</span><span style="color:white">o</span><span style="color:white">u</span>&nbsp.&nbsp.&nbsp.</p>
+      <!-- <div  class="step" data-x="21000" data-y="2600" data-rotate="8" data-scale="13">
+          <p style = 'text-align:center'> <b style="font-weight: small;"><span style="color:white">T</span><span style="color:grey">h</span><span style="color:white">a</span><span style="color:grey">n</span><span style="color:white">k</span>&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color:grey">Y</span><span style="color:white">o</span><span style="color:grey">u</span></p>
+      </div> -->
+
+
+</div>
+
+<!--
+
+    Hint is not related to impress.js in any way.
+
+    But it can show you how to use impress.js features in creative way.
+
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+
+    ...
+
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+
+    Just sayin' ;)
+
+-->
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+
+    Last, but not least.
+
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+
+    In here I just include full source of the script to make it more readable.
+
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+<script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/soundcloud.player.api.js"></script>
+<script type="text/javascript">
+   soundcloud.addEventListener('onPlayerReady', function(player, data) {
+     player.api_play();
+   });
+</script>
+</script>
+</body>
+</html>
